@@ -1,0 +1,270 @@
+body {
+    background-color: whitesmoke;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+}
+
+.nav {
+    background-color: darkcyan;
+}
+
+.navItem {
+    display: inline-block;
+    font-family: "Montserrat";
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 1% 1% 1% 1%;
+}
+
+.selected {
+    color: darkcyan;
+    background-color: whitesmoke;
+}
+
+footer {
+    background-color: darkcyan;
+    font-family: "Montserrat";
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+    padding: 1% 0% 1% 0%;
+}
+
+.createForm {
+    margin: 5% 20% 5% 20%;
+    color: #403F4C;
+    font-family: "Montserrat";
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blogContainer {
+    margin: 1% 20% 1% 20%;
+    height: 100%;
+    width: auto;
+    color: #403F4C;
+    font-family: "Montserrat";
+}
+
+.post {
+    text-align: left;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.1);
+    width: auto;
+    height: fit-content;
+    margin: 0% 0% 3% 0%;
+}
+
+.postEmpty {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.postTitle {
+    display: inline-block;
+    margin: 1% 0% 1% 1%;
+    padding: 1% 0% 1% 1%;
+}
+
+.postContent {
+    margin: 1% 0% 2% 1%;
+    padding: 0% 1% 2% 1%;
+    word-wrap: break-word;
+}
+
+.editContainer {
+    color: #403F4C;
+    font-family: "Montserrat";
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.1);
+    width: auto;
+    min-height: fit-content;
+    margin: 0% 0% 3% 0%;
+    overflow: hidden;
+}
+
+.editBox {
+    font-family: "Montserrat";
+    letter-spacing: .5px;
+    text-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding: 1%;
+    border: 0;
+    box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+    height: auto;
+}
+
+.formContainer {
+    width: auto;
+    height: 100%;
+    margin: 0% 5% 2% 5%;
+}
+
+.editForm {
+    padding: 1% 5% 2% 5%;
+    width: auto;
+    height: fit-content;
+}
+
+h1 {
+    margin-left: 5%;
+    opacity: 90%;
+}
+
+h2 {
+    margin-bottom: 1%;
+    opacity: 60%;
+}
+
+.textBox {
+    font-family: "Montserrat";
+    letter-spacing: .5px;
+    width: 100%;
+    text-wrap: wrap;
+    padding: 1%;
+    border: 0;
+    box-sizing: border-box;
+}
+
+#content {
+    height: 25vh;
+}
+
+::placeholder {
+    font-family: "Montserrat";
+}
+
+.clearButton, .createButton {
+    width: 10%;
+    margin: 3% 0 1% 1%;
+    float: right;
+    color: whitesmoke;
+    padding: .5% .25% .5% .25%;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 1vw;
+    border: solid black 1px;
+    border-radius: 10px;
+    transition: background-color .5s ease;
+}
+
+.saveButton {
+    width: 10%;
+    margin: 3% 0 1% 1%;
+    float: right;
+    color: whitesmoke;
+    padding: .5% .25% .5% .25%;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 1vw;
+    border: solid black 1px;
+    border-radius: 10px;
+    transition: background-color .5s ease;
+}
+
+.saveContainer {
+    width: 100%;
+    height: 5vh;
+}
+
+.clearButton {
+    background-color: #ef3e36;
+    border: 0;
+}
+
+.clearButton:hover {
+    cursor: pointer;
+    background-color: #cd3931;
+}
+
+.clearButton:active {
+    animation: .2s;
+    box-shadow: 0px 0px 1px 1px rgb(155, 155, 155);
+}
+
+.createButton, .saveButton {
+    color: black;
+    background-color: lightgray;
+    border: 0;
+}
+
+.createButton:hover, .saveButton:hover {
+    cursor: pointer;
+    background-color: rgb(187, 187, 187);
+}
+
+.createButton:active, .saveButton:active {
+    animation: .2s;
+    box-shadow: 0px 0px 1px 1px rgb(155, 155, 155);
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    margin-left: auto;
+    margin-right: 2%;
+    color: #403F4C;
+    font-family: "Montserrat";
+}
+
+.dropContent {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 3px 3px lightgray;
+    z-index: 1;
+}
+
+.dropContent a {
+    color: #403F4C;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropButton {
+    height: 3vh;
+    width: 5vw;
+    background-color: whitesmoke;
+    border: none;
+    opacity: 50%;
+}
+
+.dots {
+    margin-top: -1.1vh;
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.titleRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropButton:hover .dots {
+    opacity: 40%;
+}
+
+.dropdown:hover a:hover {
+    opacity: 60%;
+}
+
+.dropdown:hover .dropContent {
+    display: block;
+}

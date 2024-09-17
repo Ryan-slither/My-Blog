@@ -1,0 +1,40 @@
+<%- include("partials/header.ejs") %>
+<div class="blogContainer">
+    <% if (locals.blogList && locals.blogList.length !== 0) { %>
+        <% for (var i = blogList.length - 1; i >= 0; --i) { %>
+            <% blogTitle = Object.keys(blogList[i])[0]; %>
+            <% if (locals.editId != i) {%>
+                <div class="post">
+                    <div class="titleRow">
+                        <h1 class="postTitle"><%= blogTitle %></h1>
+                        <div class="dropdown">
+                            <button class="dropButton"><div class="dots">...</div></button>
+                            <div class="dropContent">
+                                <a href="/Delete/<%=i%>">Delete</a>
+                                <a href="/Edit/<%=i%>">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="postContent"><%= blogList[i][blogTitle] %></div>
+                </div>
+            <% } else {%>
+                <% console.log(locals.editId) %>
+                <div class="editContainer">
+                    <form class="editForm" action="/Save" method="post">
+                        <h2>Title</h2>
+                        <textarea class="editBox" id="editTitle" name="editTitle" required autofocus><%= blogTitle %></textarea><br>
+                        <h2>Content</h2>
+                        <textarea class="editBox" id="editContent" name="editContent" required><%= blogList[i][blogTitle] %></textarea><br>
+                        <button type="submit" class="saveButton" value="saveButton" name="button">Save</button>
+                    </form>
+                </div>
+            <% } %>
+        <% } %>
+    <% } else { %>
+        <h1 class="postEmpty">Create your first post on the Create tab!</h1>
+    <% } %>
+</div>
+
+
+
+<%- include("partials/footer.ejs") %>

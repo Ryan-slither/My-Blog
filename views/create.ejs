@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+<div class="createForm">
+    <h1>Create a Post!</h1>
+    <div class="formContainer">
+        <form action="/Create/Submit" method="post">
+            <h2>Title</h2>
+            <textarea class="textBox" placeholder="Enter the title for your post" id="title" name="title" required autofocus></textarea><br>
+            <h2>Content</h2>
+            <textarea class="textBox" placeholder="What would you like to talk about?" id="content" name="content" required></textarea><br>
+            <button type="submit" class="createButton" value="createButton" name="button">Create</button>
+            <button type="submit" class="clearButton" value="clearButton" name="button">Clear</button>
+        </form>
+    </div>
+</div>
+
+
+
+<%- include("partials/footer.ejs") %>
