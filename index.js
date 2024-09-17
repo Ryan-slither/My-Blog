@@ -15,6 +15,7 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
     res.render("index.ejs", {
         homeSelected : true,
+        editId: editID,
         blogList : blogs
     });
     console.log(blogs);
@@ -23,6 +24,7 @@ app.get("/", (req, res) => {
 app.get("/Delete/:id", (req, res) => {
     const blogID = req.params.id;
     console.log(blogID);
+    console.log(editID);
     if (blogID < editID) {
         editID = editID - 1;
     }
@@ -51,6 +53,7 @@ app.post("/Save", (req, res) => {
         homeSelected : true,
         blogList : blogs
     });
+    editID = NaN;
 })
 
 app.get("/Create", (req, res) => {
