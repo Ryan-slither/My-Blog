@@ -3,15 +3,15 @@
     <% if (locals.blogList && locals.blogList.length !== 0) { %>
         <% for (var i = blogList.length - 1; i >= 0; --i) { %>
             <% blogTitle = Object.keys(blogList[i])[0]; %>
-            <% if (locals.editId != i) {%>
+            <% if (locals.editId != blogList[i].blogId) {%>
                 <div class="post">
                     <div class="titleRow">
                         <h1 class="postTitle"><%= blogTitle %></h1>
                         <div class="dropdown">
                             <button class="dropButton"><div class="dots">...</div></button>
                             <div class="dropContent">
-                                <a href="/Delete/<%=i%>">Delete</a>
-                                <a href="/Edit/<%=i%>">Edit</a>
+                                <a href="/Delete/<%=blogList[i].blogId%>">Delete</a>
+                                <a href="/Edit/<%=blogList[i].blogId%>">Edit</a>
                             </div>
                         </div>
                     </div>

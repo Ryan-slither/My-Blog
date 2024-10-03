@@ -48,11 +48,12 @@ footer {
 }
 
 .blogContainer {
-    margin: 1% 20% 1% 20%;
+    padding: 1% 20% 1% 20%;
     height: 100%;
     width: auto;
     color: #403F4C;
     font-family: "Montserrat";
+    overflow-y: scroll;
 }
 
 .post {
