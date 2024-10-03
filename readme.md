@@ -1,6 +1,6 @@
 # My-Blog
 * A website where you can post blogs for you to see 
-* Created with Node, Express, and EJS
+* Created with Node, Express, SQLite3, and EJS
 
 # Viewing
 * Clone the repository to your machine
